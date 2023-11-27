@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="calendar"></div>
+  </body>
+  <script>
+    const calendarContainer = document.getElementById("calendar");
+    const calendar = new FullCalendar.Calendar(calendarContainer, {
+      initialView: "dayGridMonth",
+      locale: "pt-br",
+      events: "appointments",
+      eventClick: function (info) {
+        window.location = "/agendamento/" + info.event.id;
+      },
+    });
+    calendar.render();
+  </script>
+</html>

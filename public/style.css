@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.page form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.page input,
+.page p {
+  font-family: "Courier New", Courier, monospace;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 15px 10px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.page button {
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  background: violet;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid violet;
+  transition: 0.2s;
+  font-size: 16px;
+  width: 500px;
+}
+
+.page button:hover,
+.page button:focus,
+.page button:active {
+  background: white;
+  color: violet;
+}
+
+.page p {
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+.page hr {
+  border: none;
+  margin: 40px 0px;
+  width: 500px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.search {
+  margin-bottom: 60px;
+}

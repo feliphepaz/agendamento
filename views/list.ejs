@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Agendamentos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <h1>Lista de Agendamentos</h1>
+    <form method="GET" action="search" class="search">
+      <input
+        type="search"
+        name="search"
+        id="search"
+        placeholder="Pesquisar por CPF ou email"
+      />
+      <button>Pesquisar</button>
+    </form>
+    <% appointments.forEach((appointment) => { %>
+    <p><strong>Nome do paciente</strong>: <%= appointment.name %></p>
+    <p><strong>Email do paciente</strong>: <%= appointment.email %></p>
+    <p><strong>CPF do paciente</strong>: <%= appointment.cpf %></p>
+    <hr />
+    <% }) %>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agendamento de Consulta</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <h1>Agendamento de Consulta</h1>
+    <form method="POST" action="/create">
+      <input type="text" name="name" id="name" placeholder="Nome do paciente" />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email do paciente"
+      />
+      <input type="text" name="cpf" id="cpf" placeholder="CPF" />
+      <input
+        type="text"
+        name="description"
+        id="description"
+        placeholder="Descrição"
+      />
+      <input type="date" name="date" id="date" placeholder="Data" />
+      <input type="time" name="hour" id="hour" placeholder="Horário" />
+      <button>Agendar</button>
+    </form>
+  </body>
+</html>

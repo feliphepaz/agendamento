@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= appointment.description %></title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body class="page">
+    <h1><%= appointment.description %></h1>
+    <p><strong>Nome do paciente</strong>: <%= appointment.name %></p>
+    <p><strong>Email do paciente</strong>: <%= appointment.email %></p>
+    <p><strong>CPF do paciente</strong>: <%= appointment.cpf %></p>
+    <% if (!appointment.finished) { %>
+    <form method="POST" action="/finish">
+      <input type="hidden" name="id" id="id" value="<%= appointment.id %>" />
+      <button>Finalizar consulta</button>
+    </form>
+    <% } %>
+  </body>
+</html>
